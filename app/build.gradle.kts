@@ -29,7 +29,7 @@ android {
                 localPropertiesFile.inputStream().use { load(it) }
             }
         }
-        buildConfigField("String", "TMDB_API_KEY", "\"${localProperties["apiKey"]}\"")
+        buildConfigField("String", "TMDB_API_KEY", "\"${localProperties["tmdb.api_key"]}\"")
     }
 
     buildTypes {
@@ -78,10 +78,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
 
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+    kapt(libs.hilt.compiler)
 
     implementation(libs.retrofit)
+    implementation(libs.retrofit.kotlinx.serialization)
 
     implementation(libs.kotlinx.serialization.json)
 

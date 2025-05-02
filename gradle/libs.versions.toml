@@ -17,6 +17,7 @@ kotlinxSerializationJson = "1.6.3"
 navigationCompose = "2.8.9"
 
 retrofit = "2.10.0"
+retrofitKotlinSerialization = "1.0.0"
 
 paging = "3.3.6"
 coil = "2.6.0"
@@ -51,6 +52,7 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 
 # --- Network (Retrofit + Kotlinx Serialization) ---
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-kotlinx-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version.ref = "retrofitKotlinSerialization" }
 
 # --- Kotlinx Serialization ---
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
